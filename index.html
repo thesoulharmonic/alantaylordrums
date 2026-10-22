@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alan Taylor | Session Drummer, Educator &amp; Composer</title>
+  <meta name="description" content="Alan Taylor is a Manchester-based session drummer, educator and composer, touring and recording with Matthew Halsall and teaching at The University of Salford.">
+  <meta property="og:title" content="Alan Taylor | Session Drummer, Educator &amp; Composer">
+  <meta property="og:description" content="Manchester-based session drummer, educator and composer.">
+  <meta property="og:image" content="images/albanner2.jpg">
+  <link rel="icon" href="images/favicon.jpg">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0a0101;
+      --text: #111;
+      --muted: #555;
+      --cream: #f2f0ea;
+      --paper: #f7f7f4;
+      --hero-text: #fdfff4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    .site-header {
+      position: fixed; inset: 0 0 auto 0; z-index: 10;
+      display: flex; align-items: center;
+      padding: 22px 30px;
+      transition: background .3s, padding .3s;
+    }
+    .site-header.scrolled { background: rgba(10, 1, 1, .92); padding: 14px 30px; }
+    .site-header nav { display: flex; gap: 28px; }
+    .site-header a {
+      color: #fff; text-decoration: none;
+      font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      opacity: .9;
+    }
+    .site-header a:hover { opacity: 1; }
+
+    /* Hero */
+    .hero {
+      position: relative; height: 100vh; min-height: 520px;
+      display: grid; place-items: center; text-align: center;
+      background: #000 url("images/alan-header.jpg") center / cover;
+      overflow: hidden; color: var(--hero-text);
+    }
+    .hero video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.25); }
+    .hero-inner { position: relative; z-index: 1; padding: 0 16px; }
+    .hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 600; letter-spacing: -2px; line-height: 1.1; }
+    .hero h1 a { text-decoration: none; }
+    .hero p { font-size: clamp(15px, 1.6vw, 18px); margin-top: 10px; }
+
+    /* Sections */
+    section { padding: 110px 30px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    h2 { font-size: 26px; font-weight: 700; letter-spacing: -1.5px; color: #000; margin-bottom: 24px; }
+
+    .about { background: var(--cream); }
+    .about .wrap > div { max-width: 540px; }
+    .about p + p { margin-top: 1.1em; }
+
+    .banner {
+      height: 420px; padding: 0;
+      background: url("images/albanner2.jpg") center 35% / cover fixed;
+    }
+
+    .contact { background: var(--paper); }
+    .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .contact .email { font-weight: 600; text-decoration: none; }
+    .contact .email:hover { text-decoration: underline; }
+    .rule { width: 72%; height: 1px; background: #333; margin: 26px 0 10px; }
+    .rule.short { width: 36%; margin-top: 0; }
+
+    .contact-photo img { width: 100%; height: auto; filter: grayscale(1); }
+
+    footer {
+      background: var(--ink); color: #aaa; text-align: center;
+      font-size: 13px; padding: 26px 16px;
+    }
+
+    @media (max-width: 800px) {
+      .site-header, .site-header.scrolled { padding: 16px; justify-content: center; }
+      section { padding: 80px 16px; }
+      .banner { background-attachment: scroll; height: 280px; }
+      .contact .wrap { grid-template-columns: 1fr; gap: 50px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero video { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <nav aria-label="Main">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Introduction">
+      <video autoplay muted loop playsinline poster="images/alan-header.jpg">
+        <source src="video/alanwebbanner.mp4" type="video/mp4">
+      </video>
+      <div class="hero-inner">
+        <h1><a href="https://ancientinfinityorchestra.bandcamp.com/album/river-of-light" target="_blank" rel="noopener">Alan Taylor</a></h1>
+        <p>Session Drummer, Educator &amp; Composer</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap">
+        <div>
+          <h2>About</h2>
+          <p>Based in Manchester, England, Alan Taylor is a versatile drummer with a diverse musical background. His extensive resume includes collaborations with artists like multi Grammy Award-Winners Michael League, Bill Laurance, and Robert ‘Sput’ Searight (Snarky Puppy and Ghost Note respectively). Currently, Alan is a recording and touring member for the critically acclaimed Jazz trumpeter Matthew Halsall.</p>
+          <p>Beyond live performances, Alan has made contributions to theatre productions, including notable shows such as The Rocky Horror Show, The BBC Proms, and Disney’s The Lion King. In addition to live performance, Alan has worked with various internationally recognised engineers and producers seeing his works being featured across numerous mainstream television and radio broadcasts.</p>
+          <p>Further to his thriving performance career, Alan is deeply committed to sharing his love for drumming. He imparts his knowledge through teaching and masterclasses at universities across the UK and Europe and is currently part of the Popular Music and Recording faculty at The University of Salford.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner" aria-hidden="true"></section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Contact</h2>
+          <a class="email" href="mailto:astaylormusic@gmail.com">astaylormusic@gmail.com</a>
+          <div class="rule"></div>
+          <div class="rule short"></div>
+        </div>
+        <div class="contact-photo">
+          <img src="images/alan-contact.jpg" alt="Alan Taylor playing drums on stage" width="684" height="1024" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Alan Taylor
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const header = document.querySelector('.site-header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
